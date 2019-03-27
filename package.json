@@ -1,0 +1,42 @@
+{
+  "name": "mediaexpress",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Sushant Bansal",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.11.0",
+    "@types/react": "^16.8.7",
+    "@types/react-dom": "^16.8.2",
+    "@types/react-native": "^0.57.38",
+    "prop-types": "^15.7.2",
+    "react": "16.6.3",
+    "react-native": "0.58.6",
+    "react-native-elements": "^1.1.0",
+    "react-native-gesture-handler": "^1.1.0",
+    "react-native-vector-icons": "^6.3.0",
+    "react-navigation": "^3.4.1",
+    "redux": "^4.0.1",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.3.1",
+    "jest": "24.3.1",
+    "metro-react-native-babel-preset": "0.53.0",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/common/assests/fonts/"
+    ]
+  }
+}

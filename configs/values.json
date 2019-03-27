@@ -1,0 +1,13 @@
+{
+    "defaultPhoneFormat" :"XXX-XXX-XXXX",
+    "regex_pattern" : {
+        "number" : {
+            "regex": "^[0-9]*$",
+            "errorMessage":"It Should be Number"
+        },
+        "string" : {
+            "regex": "^[a-zA-Z]*$",
+            "errorMessage":"It Should be String"
+        }
+    }
+}

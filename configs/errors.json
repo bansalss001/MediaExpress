@@ -1,0 +1,5 @@
+{
+    "minLength" : "Minimum Length Must Be ",
+    "maxLength" : "Maximum Length Must Be ",
+    "isRequired" : "This Field is Mandatory"
+}
