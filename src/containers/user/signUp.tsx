@@ -25,9 +25,7 @@ export default class SignUpComponent extends React.Component<{ children: React.R
                         required: true
                     },
                     leftIcon: {
-                        name: 'star',
-                        type: 'font-awesome',
-                        color: 'black'
+                        iconName: 'star'
                     }
                 },
                 {
@@ -40,9 +38,7 @@ export default class SignUpComponent extends React.Component<{ children: React.R
                         required: true
                     },
                     leftIcon: {
-                        name: 'envelope',
-                        type: 'font-awesome',
-                        color: 'black'
+                        iconName: 'envelope'
                     }
                 }, {
                     type: 'textField',
@@ -54,9 +50,7 @@ export default class SignUpComponent extends React.Component<{ children: React.R
                         required: true
                     },
                     leftIcon: {
-                        name: 'mobile',
-                        type: 'font-awesome',
-                        color: 'black'
+                        iconName: 'mobile'
                     }
                 }, {
                     type: 'password',
@@ -67,9 +61,7 @@ export default class SignUpComponent extends React.Component<{ children: React.R
                         required: true,
                     },
                     leftIcon: {
-                        name: 'key',
-                        type: 'font-awesome',
-                        color: 'black'
+                        iconName: 'key'
                     }
                 }],
             },

@@ -1,4 +1,3 @@
-import BUTTON from './formModels/button.model'
 
 export default class FORM {
     header?: {
@@ -11,7 +10,7 @@ export default class FORM {
 }
 
 class Fields {
-    type?:'textField' | 'password' ;
+    type?:'textField' | 'password' | 'textArea' ;
     label?:{
         name : string;
         class ?: string;
@@ -27,6 +26,7 @@ class Fields {
     errorMessage?: string;
     validation?: {
         type?: 'number' | 'string';
+        maskedText?: string; /*  Eg -> 00/00/0000 value will replace 0 with actual data  */
         required?: boolean;
         minLength?: number;
         maxLength?: number;
@@ -34,11 +34,8 @@ class Fields {
             config_file_value: string;
         }
     };
-    leftIcon?: {
-        name : string,
-        type : string,
-        color ?: string
-    };
+    leftIcon?: ICON;
+    rightIcon?: ICON;
 }
 
 class Groups {
@@ -54,4 +51,19 @@ class Groups {
         action?: string;
         groupElementName?: string;
     }
+}
+class ICON {
+    iconName?: string;
+    iconSize?: number;
+    iconColor?: string;
+    onPress?: Function;
+}
+
+class BUTTON {
+    display_text?: string;
+    disabled?: boolean;
+    onPress?: Function;
+    buttonClass?: string;
+    icon?: ICON;
+    type?: 'SUBMIT' | 'CLEAR';
 }

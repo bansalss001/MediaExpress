@@ -1,8 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { StyleBuilder } from '../../../assests'
+import { View , TouchableHighlight ,Text} from 'react-native';
+import { StyleBuilder } from '../../../assests';
+import IconComponent from './icon';
 
 export default class ButtonComponent extends React.Component {
     constructor(props) {
@@ -11,21 +10,14 @@ export default class ButtonComponent extends React.Component {
     render() {
         let buttonData = this.props.buttonData;
         return (
-            <Button
-                icon={
-                    <Icon
-                        name={buttonData.icon && buttonData.icon.iconName}
-                        size={buttonData.icon && buttonData.icon.iconSize}
-                        color={buttonData.icon && buttonData.icon.iconColor}
-                    />
-                }
-                title={this.props.buttonData.display_text}
-                onPress={this.props.buttonData.onPress}
-                disabled={this.props.buttonData.disabled}
-                type={this.props.buttonData.type}
-                buttonStyle={StyleBuilder('button '+buttonData.buttonClass)}
-            ></Button>
-        );
-
+            <TouchableHighlight onPress={buttonData.onPress}>
+            <View style={StyleBuilder('button '+buttonData.buttonClass)}>
+                {buttonData.icon && <IconComponent iconData={buttonData.icon}></IconComponent>}
+                 <Text>
+                        {this.props.buttonData.display_text}
+                 </Text>
+            </View>
+            </TouchableHighlight>
+        )
     }
 }

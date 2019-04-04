@@ -17,6 +17,7 @@ export default class LoginComponent extends React.Component<{ children: React.Re
         groupHeader: {
           groupName: 'Login'
         },
+        groupClass : 'noBorder',
         fields: [{
           type: 'textField',
           parameterName: 'username',
@@ -24,15 +25,10 @@ export default class LoginComponent extends React.Component<{ children: React.Re
           placeHolder: 'Eg. abc@xyz.com',
           keyboardType: 'email-address',
           validation: {
-            required: true,
-            minLength:1,
-            maxLength:2,
-            type: 'number'
+            required: true
           },
           leftIcon: {
-            name: 'user',
-            type: 'font-awesome',
-            color: 'black'
+            iconName: 'user'
           }
         }, {
           type: 'password',
@@ -43,17 +39,18 @@ export default class LoginComponent extends React.Component<{ children: React.Re
             required: true
           },
           leftIcon: {
-            name: 'key',
-            type: 'font-awesome',
-            color: 'black'
+            iconName: 'key'
           }
         }],
-      },
-      ],
+      }],
       buttons: [
         {
+          buttonClass : 'buttonWhite',
           display_text: 'SignUp',
-          onPress: () => this.props.navigation.navigate('SignUp')
+          onPress: () => this.props.navigation.navigate('SignUp'),
+          icon :{
+            iconName : 'search'
+          }
         },
         {
           display_text: 'Login',
