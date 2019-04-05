@@ -10,7 +10,7 @@ export default class FORM {
 }
 
 class Fields {
-    type?:'textField' | 'password' | 'textArea' ;
+    type?:'textField' | 'password' | 'textArea' | 'dropOption' ;
     label?:{
         name : string;
         class ?: string;
@@ -19,9 +19,15 @@ class Fields {
     parameterName : string;
     placeHolder?: string;
     defaultValue?: string;
+    selectionOptions?:Array<{
+        value : string;
+        label ?: string;
+        nextLine ?: boolean;
+        class ?: string;
+    }>;
     multiline?: boolean;
     numberOfLines?: number;
-    editable?: boolean;
+    readOnly?: boolean;
     keyboardType?: 'default' | 'number-pad' | 'decimal-pad' | 'email-address' | 'phone-pad' | 'numeric';
     errorMessage?: string;
     validation?: {

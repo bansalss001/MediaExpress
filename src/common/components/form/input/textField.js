@@ -127,6 +127,7 @@ export default class TextFieldComponent extends BaseClass {
                         placeholder={textInputData.placeHolder}
                         keyboardType={textInputData.keyboardType}
                         value={this.state.returnValue}
+                        editable={textInputData.readOnly ? false : true}
                         secureTextEntry={textInputData.validation && textInputData.validation.isPassword}
                         style={StyleBuilder('textField '+textInputData.class)}
                         onKeyPress={(value) => this.onKeyPress(value.nativeEvent.key)}

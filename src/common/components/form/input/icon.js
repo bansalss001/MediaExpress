@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StyleBuilder } from '../../../assests';
 import { TouchableHighlight } from 'react-native';
-import PropTypes from 'prop-types';
 
 export default class IconComponent extends Component {
     constructor(props) {

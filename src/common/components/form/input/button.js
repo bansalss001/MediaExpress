@@ -10,7 +10,7 @@ export default class ButtonComponent extends React.Component {
     render() {
         let buttonData = this.props.buttonData;
         return (
-            <TouchableHighlight onPress={buttonData.onPress}>
+            <TouchableHighlight onPress={!buttonData.readOnly && buttonData.onPress}>
             <View style={StyleBuilder('button '+buttonData.buttonClass)}>
                 {buttonData.icon && <IconComponent iconData={buttonData.icon}></IconComponent>}
                  <Text>

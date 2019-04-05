@@ -47,16 +47,20 @@ export default FormStyle = {
         borderRadius: 7
     },
     buttonPrimary: {
-        backgroundColor: Color.DodgerBlue
+        backgroundColor: Color.DodgerBlue,
+        color : Color.DodgerBlue
     },
     buttonError: {
-        backgroundColor: Color.Red
+        backgroundColor: Color.Red,
+        color : Color.Red
     },
     buttonWarning: {
-        backgroundColor: Color.Yellow
+        backgroundColor: Color.Yellow,
+        color : Color.Yellow
     },
     buttonWhite: {
-        backgroundColor: Color.GhostWhite
+        backgroundColor: Color.GhostWhite,
+        color : Color.GhostWhite
     },
     groupFieldLabel: {
         padding: 5

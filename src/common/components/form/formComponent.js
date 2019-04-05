@@ -4,6 +4,7 @@ import TextFieldComponent from './input/textField';
 import ButtonComponent from './input/button';
 import PasswordComponent from './input/password';
 import TextAreaComponent from './input/textarea';
+import DropOptionsComponent from './input/dropOptions';
 import { StyleBuilder } from '../../assests/style/lib/styleBuilder';
 errorConfig = require('../../../../configs/errors.json');
 
@@ -60,6 +61,8 @@ export default class FormComponent extends Component {
                           return <PasswordComponent style={StyleBuilder('groupFields')} passwordData={field} key={'password_' + index} onChange={this.updateFormFieldValues}></PasswordComponent>
                         case 'textArea':
                           return <TextAreaComponent style={StyleBuilder('groupFields')} textAreaData={field} key={'password_' + index} onChange={this.updateFormFieldValues}></TextAreaComponent>
+                        case 'dropOption':
+                          return <DropOptionsComponent style={StyleBuilder('groupFields')} dropOptionData={field} key={'password_' + index} onChange={this.updateFormFieldValues}></DropOptionsComponent>
                       }
                     })
                   }

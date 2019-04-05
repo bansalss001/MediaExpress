@@ -73,6 +73,7 @@ export default class TextAreaComponent extends BaseClass {
                         multiline={true}
                         numberOfLines={textAreaData.numberOfLines}
                         keyboardType={textAreaData.keyboardType}
+                        editable={textInputData.readOnly ? false : true}
                         value={this.state.returnValue}
                         secureTextEntry={textAreaData.validation && textAreaData.validation.isPassword}
                         style={StyleBuilder('textField ' + textAreaData.class)}
