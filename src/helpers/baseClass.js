@@ -1,5 +1,5 @@
 import React from 'react';
-configValues = require('../../configs/values.json')
+let configValues = require('../../configs/values.json')
 
 export class BaseClass extends React.Component {
     constructor(props) {

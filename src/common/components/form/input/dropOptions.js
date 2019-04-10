@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableHighlight, Text, Picker } from 'react-native';
+import { View, Text, Picker } from 'react-native';
 import { StyleBuilder } from '../../../assests';
 import IconComponent from './icon';
 
@@ -15,11 +15,12 @@ export default class DropOptionsComponent extends React.Component {
                 <View style={StyleBuilder('textFieldComponent')}>
                     {dropOptionData.icon && <IconComponent iconData={dropOptionData.icon}></IconComponent>}
                     <Picker
-                        selectedValue = {dropOptionData.defaultValue ? dropOptionData.defaultValue : null}
+                        selectedValue = {dropOptionData.defaultValue ? dropOptionData.defaultValue : ""}
                         style = {StyleBuilder(' ' + dropOptionData.class)}
-                        onValueChange={}
+                        onValueChange={(itemValue,itemPosition)=>this.props.onChange(dropOptionData.parameterName,itemValue,false)}
                         enabled={dropOptionData.readOnly ? false : true }
                        >
+                       <Picker.Item label="Select Option" value="" key={'options_'}/>
                        {dropOptionData.selectionOptions && dropOptionData.selectionOptions.map((option,index)=>{
                            if(option.nextLine)
                            {

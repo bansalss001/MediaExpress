@@ -2,8 +2,7 @@ import React from 'react';
 import { View, Text, TextInput } from 'react-native';
 import { StyleBuilder } from '../../../../common/assests/index';
 import { BaseClass } from '../../../../helpers/baseClass';
-errorConfig = require('../../../../../configs/errors.json');
-configValues = require('../../../../../configs/values.json');
+let errorConfig = require('../../../../../configs/errors.json');
 import IconComponet from './icon';
 
 /* 

@@ -5,8 +5,9 @@ import ButtonComponent from './input/button';
 import PasswordComponent from './input/password';
 import TextAreaComponent from './input/textarea';
 import DropOptionsComponent from './input/dropOptions';
+import SwitchComponent from './input/switch';
 import { StyleBuilder } from '../../assests/style/lib/styleBuilder';
-errorConfig = require('../../../../configs/errors.json');
+let errorConfig = require('../../../../configs/errors.json');
 
 
 export default class FormComponent extends Component {
@@ -19,6 +20,7 @@ export default class FormComponent extends Component {
     this.setState({ formName: this.props.formData.header && this.props.formData.header.formName });
   }
 
+  /*paramName : string, value : string, validation : boolean*/
   updateFormFieldValues = (paramName, value, validation) => {
     this.state[paramName] = {
       value: value,
@@ -63,6 +65,8 @@ export default class FormComponent extends Component {
                           return <TextAreaComponent style={StyleBuilder('groupFields')} textAreaData={field} key={'password_' + index} onChange={this.updateFormFieldValues}></TextAreaComponent>
                         case 'dropOption':
                           return <DropOptionsComponent style={StyleBuilder('groupFields')} dropOptionData={field} key={'password_' + index} onChange={this.updateFormFieldValues}></DropOptionsComponent>
+                        case 'switch':
+                          return <SwitchComponent style={StyleBuilder('groupFields')} switchData={field} key={'password_' + index} onChange={this.updateFormFieldValues}></SwitchComponent> 
                       }
                     })
                   }

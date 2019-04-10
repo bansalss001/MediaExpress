@@ -10,10 +10,11 @@ export default class FORM {
 }
 
 class Fields {
-    type?:'textField' | 'password' | 'textArea' | 'dropOption' ;
+    type?:'textField' | 'password' | 'textArea' | 'dropOption' | 'switch';
     label?:{
         name : string;
         class ?: string;
+        onPress ?: Function;
     };
     class?: string;
     parameterName : string;
