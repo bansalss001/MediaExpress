@@ -100,5 +100,8 @@ export default FormStyle = {
     },
     noBorder : {
         borderWidth : 0
+    },
+    slider : {
+        width : '95%'
     }
 };

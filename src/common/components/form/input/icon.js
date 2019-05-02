@@ -17,6 +17,9 @@ export default class IconComponent extends Component {
             this.props.onPress();
             this.props.changeValue && this.setState({ pressed: !this.state['pressed'] });
         }
+        else {
+            return null;
+        }
     }
 
     render() {

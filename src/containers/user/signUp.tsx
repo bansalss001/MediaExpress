@@ -10,10 +10,6 @@ export default class SignUpComponent extends React.Component<{ children: React.R
     constructor(props: any) {
         super(props);
         this.formData = {
-            groups: [{
-                groupHeader: {
-                    groupName: 'Sign Up'
-                },
                 fields: [{
                     type: 'textField',
                     label: {
@@ -64,8 +60,6 @@ export default class SignUpComponent extends React.Component<{ children: React.R
                         iconName: 'key'
                     }
                 }],
-            },
-            ],
             buttons: [
                 {
                     display_text: 'Register',

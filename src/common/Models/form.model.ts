@@ -4,13 +4,13 @@ export default class FORM {
         formName?: string;
         headerClass?: string;
     };
-    groups?: Array<Groups>;
+    fields?: Array<Fields>;
     buttons?: Array<BUTTON>;
     class?: string;
 }
 
 class Fields {
-    type?:'textField' | 'password' | 'textArea' | 'dropOption' | 'switch';
+    type?:'textField' | 'password' | 'textArea' | 'dropOption' | 'switch' | 'slider';
     label?:{
         name : string;
         class ?: string;
@@ -19,12 +19,13 @@ class Fields {
     class?: string;
     parameterName : string;
     placeHolder?: string;
-    defaultValue?: string;
+    defaultValue?: any;
     selectionOptions?:Array<{
-        value : string;
-        label ?: string;
+        value : any;
+        label : string;
         nextLine ?: boolean;
         class ?: string;
+        icon ?: string;
     }>;
     multiline?: boolean;
     numberOfLines?: number;
@@ -32,10 +33,12 @@ class Fields {
     keyboardType?: 'default' | 'number-pad' | 'decimal-pad' | 'email-address' | 'phone-pad' | 'numeric';
     errorMessage?: string;
     validation?: {
-        type?: 'number' | 'string';
+        type?: 'number' | 'string' | 'decimal';
         maskedText?: string; /*  Eg -> 00/00/0000 value will replace 0 with actual data  */
         required?: boolean;
         minLength?: number;
+        minValue?:number;  /* REQUIRED Field only for slider*/
+        maxValue?:number;  /* REQUIRED Field only for slider*/
         maxLength?: number;
         regex_pattern?: {
             config_file_value: string;
@@ -45,20 +48,6 @@ class Fields {
     rightIcon?: ICON;
 }
 
-class Groups {
-    groupHeader?: {
-        groupName?: string;
-        headerClass?: string;
-    };
-    fields?: Array<Fields>;
-    groupType?: string;
-    groupClass?: string;
-    groupButtons?: Array<BUTTON>;
-    groupAction?: {
-        action?: string;
-        groupElementName?: string;
-    }
-}
 class ICON {
     iconName?: string;
     iconSize?: number;

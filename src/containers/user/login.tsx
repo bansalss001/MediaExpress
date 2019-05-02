@@ -13,11 +13,9 @@ export default class LoginComponent extends React.Component<{ children: React.Re
   constructor(props: any) {
     super(props);
     this.formData = {
-      groups: [{
-        groupHeader: {
-          groupName: 'Login'
+        header:{
+          formName : 'login'
         },
-        groupClass : 'noBorder',
         fields: [{
           type: 'textField',
           parameterName: 'username',
@@ -42,7 +40,6 @@ export default class LoginComponent extends React.Component<{ children: React.Re
             iconName: 'key'
           }
         }],
-      }],
       buttons: [
         {
           buttonClass : 'buttonWhite',

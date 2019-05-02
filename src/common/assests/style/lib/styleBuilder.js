@@ -10,7 +10,7 @@ import { StyleClass } from '../';
 export function StyleBuilder(classs) {
   let style = {};
   if (classs) {
-    classes = classs.split(' ');
+    let classes = classs.split(' ');
     for (let clas of classes) {
       if (StyleClass['@' + Platform.OS + ':' + clas]) {
         Object.assign(style, StyleClass['@' + Platform.OS + ':' + clas]);
@@ -20,6 +20,6 @@ export function StyleBuilder(classs) {
       }
     }
   }
-  
+
   return style;
 }

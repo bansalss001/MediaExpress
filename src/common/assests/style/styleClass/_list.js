@@ -2,5 +2,5 @@ import { FontForWeight, CalculateFontSize, CalculateLineHeight, AppColor} from '
 import { Color, FontSize } from '../../constants';
 
 export default ListStyle={
-    
+
 }
